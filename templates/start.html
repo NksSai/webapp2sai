@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Python</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le styles -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/static/css/docs.css" rel="stylesheet">
+	<style>
+	body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+	</style>
+    <link href="/static/css/prettify.css" rel="stylesheet">
+    <link rel="apple-touch-icon-precomposed" href="http://v2.bootcss.com/assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="http://v2.bootcss.com/assets/ico/favicon.png">
+
+	<style id="holderjs-style" type="text/css"></style>
+	<style type="text/css">
+#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}
+	</style>
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar" style="">
+
+{% include 'Navbar.html' %}
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>快速入门</h1>
+    <p class="lead">Now is better than never.</p>
+  </div>
+</header>
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav affix-top">
+          <li class="active"><a href="#runpython"><i class="icon-chevron-right"></i>运行python</a></li>
+          <li><a href="#samplePython"><i class="icon-chevron-right"></i>简单的Python</a></li>
+          <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> 流式栅格系统</a></li>
+          <li><a href="#layouts"><i class="icon-chevron-right"></i> 布局</a></li>
+          <li><a href="#responsive"><i class="icon-chevron-right"></i> 响应式设计</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Global Bootstrap settings
+        ================================================== -->
+        <section id="runpython">
+          <div class="page-header">
+            <h1>运行python</h1>
+          </div>
+          <h3>windows</h3>
+          <p>你可以轻松的下载windows版的<a href="http://www.python.org/ftp/python/2.7.6/python-2.7.6.msi">python</a>,我推荐下载python2而并非python3（别问我为什么，python3开发远远比普及要快）</p>
+		  <p>下载完成后，别忘了把python.exe的路径加到环境变量里面。</p>
+		  <p>为了更方便的安装python的包，推荐安装<a href="https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py">setuptools</a>，下载这个脚本，然后再命令行中运行就可以了。</p>
+		  <p>python本身的终端并不是很好用，都没有自动补全。我推荐使用ipython,之前已经安装过了setuptools,在命令行中运行。</p>
+		  <pre>pip install ipython</pre>
+		  <p>就可以安装ipython了,如果过程中提示缺少什么模块，可以再用pip安装。</p>
+		  <h3>linux</h3>
+          <p>linux肯定是自带python的，所以问题就是安装ipython就可以了</p>
+          <pre>sudo apt-get install ipython</pre>
+          <p>或者是redhat系的</p>
+          <pre>yum install ipython</pre>
+          <p>都能很方便的安装。</p>
+          <h3>除此之外</h3>
+          <p>除此之外，一个好的编辑器也是可以帮助你写python的利器，如vim，Sublime，或者是Eclipse+pydev都可以。</p>
+          <p>到现在你应该完成</p>
+          <ul>
+          	<li>有一个python的shell环境，推荐用ipython。</li>
+          	<li>一个用来写代码的环境，python以及pip并且在path中。</li>
+          	<li>一个可以方便上网的环境。</li>
+          </ul>
+          <p>现在你可以打开你的python shell，准备进入下面的旅程了。</p>
+        </section>
+
+        <!-- Grid system
+        ================================================== -->
+        <section id="samplePython">
+          <div class="page-header">
+            <h1>简单的Python</h1>
+          </div>
+		  <h2>Hello World</h2>
+		  <p>我们从Hello World来认识Python的交换环境，从这部分开始你应该和教程一起做，光看是不行的。</p>
+		  <p>打开你的命令行，输入python或是ipython就能进入交互界面了。</p>
+		  <pre class="prettyprint">Python 2.7.6 (default, Nov 18 2013, 15:12:51) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 1.1.0 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: print "hello world!"
+hello world!
+		  </pre>
+		  <p>python的交互界面是很典型的REPL(Read-Eval-Print Loop)环境，输入一段代码，回车就会执行这部分代码，然后给出返回值。一般一行是一个表达式，但是你也可以在一个表达式后面加上';'，然后再写另一个表达式。</p>
+		  <pre>In [4]: print 'hehe';print 'hehe'
+hehe
+hehe</pre>
+		  <p><code>print</code>是我们见到的第一个语句，它会打印出之后的内容，并且在后面加上一个'\n'，如果你不想让它换行的话在后面的内容后加一个','就可以了。</p>
+		  <pre class="prettyprint">In [5]: print 'hehe',;print 'hehe'
+hehe hehe</pre>
+          <h2>变量</h2>
+          <p>python可能不同于你之前学过得其他语言，它的变量是不用声明的，你可以随意的直接赋值，而不用声明它是什么类型的。</p>
+          <pre class="prettyprint">In [14]: a = 1
+In [15]: b = "hehe"
+In [16]: print a 
+1
+In [17]: print b
+hehe</pre>
+		  <p>谈到变量，大家肯定会想到整型，字符串神马的，用python的时候基本不用注意这些，python的数很大，达到我们认为是无穷大，所以你不用担心整型越界的问题，字符串就是夹在""或者是''中的内容，有一些特殊的用法会在之后提及。</p>
+		  <p>这里还是要提几句，如果java是一切都是类的话，python应该是一切都是对象，python中没有基本类型这种东西，所有的东西都是对象，这种事不懂也无所谓，我就是提一句。</p>
+		  <p>有个函数<code>type</code>可以返回某个对象是什么类型的</p>
+		  <pre class="prettyprint">In [31]: type(12.123)
+Out[31]: float
+In [32]: type("hehe")
+Out[32]: str</pre>
+		  <p>python的运算符也是重载过得，（如果你连重载是什么意思都不记得了就当我没说）,想加号可以用来加数（废话）也可以用来连接其他东西比如字符串、列表（还没讲到不用管它）</p>
+		  <p>其实最简单的一句话，你感觉应该有的操作，python都有，还有*是乘号，**（两个乘号）就是乘方的意思了，是不是很方便。</p>
+		  <pre class="prettyprint">In [35]: 'fuck you three times' + ' everyday'
+Out[35]: 'fuck you three times everyday'
+In [36]: 2**3
+Out[36]: 8</pre>
+		  <p>你开始敲python的指令时应该能发现，如果你手贱写错的代码就会有报错提示。</p>
+		  <pre class="prettyprint">In [37]: print 1+'hehe'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-37-84e8e255ecc5> in <module>()
+----> 1 print 1+'hehe'
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'</pre>
+		  <p>我只能说如果你认真看这些鸟语，还是很人性化的。</p>
+          <h3>带有基本栅格的HTML代码</h3>
+          <p>对于简单的两列式布局，创建一个 <code>.row</code> 容器，并在容器中加入合适数量的 <code>.span*</code> 列即可。由于默认是12列的栅格，所有 <code>.span*</code> 列所跨越的栅格数之和最多是12(或者等于其父容器的栅格数)。</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span8"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+          <p>上面的代码展示了 <code>.span4</code> 和 <code>.span8</code> 两列，两列的和总共是12个栅格。</p>
+
+          <h2>偏移列</h2>
+          <p>把列向右移动可使用 <code>.offset*</code> 类。每个类都给列的左边距增加了指定单位的列。例如，<code>.offset4</code> 将 <code>.span4</code> 右移了4个列的宽度。</p>
+          <div class="bs-docs-grid">
+            <div class="row show-grid">
+              <div class="span4">4</div>
+              <div class="span3 offset2">3 offset 2</div>
+            </div><!-- /row -->
+            <div class="row show-grid">
+              <div class="span3 offset1">3 offset 1</div>
+              <div class="span3 offset2">3 offset 2</div>
+            </div><!-- /row -->
+            <div class="row show-grid">
+              <div class="span6 offset3">6 offset 3</div>
+            </div><!-- /row -->
+          </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span3 offset2"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+
+          <h2>嵌套列</h2>
+          <p>在默认的栅格系统里, 在已有的<code>.span*</code>内添加一个新的 <code>.row</code> 并加入 <code>.span*</code> 列，就可实现嵌套。被嵌套列中的每列列数总和要等于父级列。</p>
+          <div class="row show-grid">
+            <div class="span9">
+              Level 1 column
+              <div class="row show-grid">
+                <div class="span6">
+                  Level 2
+                </div>
+                <div class="span3">
+                  Level 2
+                </div>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span9"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">    Level 1 column</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span6"</span><span class="tag">&gt;</span><span class="pln">Level 2</span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span3"</span><span class="tag">&gt;</span><span class="pln">Level 2</span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L7"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+        </section>
+
+
+
+        <!-- Fluid grid system
+        ================================================== -->
+        <section id="fluidGridSystem">
+          <div class="page-header">
+            <h1>流式栅格系统</h1>
+          </div>
+
+          <h2>流式栅格系统案例</h2>
+          <p>流式栅格系统对每一列的宽度使用百分比而不是像素数量。它和固定栅格系统一样拥有响应式布局的能力，这就保证它能对不同的分辨率和设备做出适当的调整。</p>
+          <div class="bs-docs-grid">
+            <div class="row-fluid show-grid">
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+              <div class="span1">1</div>
+            </div>
+            <div class="row-fluid show-grid">
+              <div class="span4">4</div>
+              <div class="span4">4</div>
+              <div class="span4">4</div>
+            </div>
+            <div class="row-fluid show-grid">
+              <div class="span4">4</div>
+              <div class="span8">8</div>
+            </div>
+            <div class="row-fluid show-grid">
+              <div class="span6">6</div>
+              <div class="span6">6</div>
+            </div>
+            <div class="row-fluid show-grid">
+              <div class="span12">12</div>
+            </div>
+          </div>
+
+          <h3>基本的流式栅格HTML代码片段</h3>
+          <p>将 <code>.row</code> 替换为 <code>.row-fluid</code> 就能让任何一行“流动”起来。应用于每一列的类不用改变，这样能方便的在流式与固定栅格之间切换。</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row-fluid"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span8"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+
+          <h2>流式栅格的偏移</h2>
+          <p>定义方式和固定网格系统相同：给任何想偏移的列添加 <code>.offset*</code> 即可。</p>
+          <div class="bs-docs-grid">
+            <div class="row-fluid show-grid">
+              <div class="span4">4</div>
+              <div class="span4 offset4">4 offset 4</div>
+            </div><!-- /row -->
+            <div class="row-fluid show-grid">
+              <div class="span3 offset3">3 offset 3</div>
+              <div class="span3 offset3">3 offset 3</div>
+            </div><!-- /row -->
+            <div class="row-fluid show-grid">
+              <div class="span6 offset6">6 offset 6</div>
+            </div><!-- /row -->
+          </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row-fluid"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4 offset2"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+
+          <h2>流式嵌套布局</h2>
+          <p>和固定栅格的嵌套有一点不同：被嵌套的列数之和要等于12。这是因为流式栅格使用百分比来设置每列的宽度。</p>
+          <div class="row-fluid show-grid">
+            <div class="span12">
+              Fluid 12
+              <div class="row-fluid show-grid">
+                <div class="span6">
+                  Fluid 6
+                  <div class="row-fluid show-grid">
+                    <div class="span6">
+                      Fluid 6
+                    </div>
+                    <div class="span6">
+                      Fluid 6
+                    </div>
+                  </div>
+                </div>
+                <div class="span6">
+                  Fluid 6
+                </div>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row-fluid"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span12"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">    Fluid 12</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row-fluid"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span6"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">        Fluid 6</span></li><li class="L6"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row-fluid"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">          </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span6"</span><span class="tag">&gt;</span><span class="pln">Fluid 6</span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">          </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span6"</span><span class="tag">&gt;</span><span class="pln">Fluid 6</span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L0"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li><li class="L1"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span6"</span><span class="tag">&gt;</span><span class="pln">Fluid 6</span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+
+        </section>
+
+
+
+
+        <!-- Layouts (Default and fluid)
+        ================================================== -->
+        <section id="layouts">
+          <div class="page-header">
+            <h1>布局</h1>
+          </div>
+
+          <h2>固定布局</h2>
+          <p>提供了一个通用的固定宽度(也可以变为响应式)的布局方式，仅仅用 <code>&lt;div class="container"&gt;</code> 即可。</p>
+          <div class="mini-layout">
+            <div class="mini-layout-body"></div>
+          </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;body&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"container"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">    ...</span></li><li class="L3"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="tag">&lt;/body&gt;</span></li></ol></pre>
+
+          <h2>流式布局</h2>
+          <p>利用 <code>&lt;div class="container-fluid"&gt;</code> 代码可以创建一个流式、两列的页面 — 非常适合于应用和文档类页面。</p>
+          <div class="mini-layout fluid">
+            <div class="mini-layout-sidebar"></div>
+            <div class="mini-layout-body"></div>
+          </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"container-fluid"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row-fluid"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span2"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">      </span><span class="com">&lt;!--Sidebar content--&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span10"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">      </span><span class="com">&lt;!--Body content--&gt;</span></li><li class="L7"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+        </section>
+
+
+
+
+        <!-- Responsive design
+        ================================================== -->
+        <section id="responsive">
+          <div class="page-header">
+            <h1>响应式设计</h1>
+          </div>
+
+          <h2>启用响应式特性</h2>
+          <p>通过在文档中的 <code>&lt;head&gt;</code> 标签里添加合适的meta标签并引入一个额外的样式表即可启用响应式CSS。如果你已经在定制页面编译好一个Bootstrap, 那么只需添加一个meta标签。</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span></li><li class="L1"><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"assets/css/bootstrap-responsive.css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="tag">&gt;</span></li></ol></pre>
+          <p><span class="label label-info">注意！</span> Bootstrap在默认情况下是没有引入响应式特性的，因为不是任何情况都需要使用到。我们并不是鼓励开发者移除此功能, 而是在需要使用的时候才启用它。</p>
+
+          <h2>关于响应式Bootstrap</h2>
+          <img src="./脚手架 · Bootstrap_files/responsive-illustrations.png" alt="Responsive devices" style="float: right; margin: 0 0 20px 20px;">
+          <p>Media queries允许在一些条件基础上自定义CSS 例如：—ratios、widths、display type, etc— 但通常都是围绕着 <code>min-width</code> 和 <code>max-width</code> 这两者。</p>
+          <ul>
+            <li>修改栅格系统中列的宽度</li>
+            <li>需要的时候, 用堆叠元素代替浮动</li>
+            <li>调整标题和文本的大小以便适合各种设备</li>
+          </ul>
+          <p>谨慎的使用media queries，先从你的手机用户开始吧。对于大型的项目, 应该考虑使用专门的代码库, 而不是构筑在media queries之上。</p>
+
+          <h2>被支持的设备</h2>
+          <p>Bootstrap 所支持的几个media queries都放在了一个文件中， 可以让你的项目更灵活的去适应不同设备和屏幕分辨率。包括：</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>类型</th>
+                <th>布局宽度</th>
+                <th>列宽</th>
+                <th>间隙宽度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>大屏幕</td>
+                <td>大于等于1200px</td>
+                <td>70px</td>
+                <td>30px</td>
+              </tr>
+              <tr>
+                <td>默认</td>
+                <td>大于等于980px</td>
+                <td>60px</td>
+                <td>20px</td>
+              </tr>
+              <tr>
+                <td>平板</td>
+                <td>大于等于768px</td>
+                <td>42px</td>
+                <td>20px</td>
+              </tr>
+              <tr>
+                <td>手机到平板</td>
+                <td>小于等于767px</td>
+                <td class="muted" colspan="2">流式列，无固定宽度</td>
+              </tr>
+              <tr>
+                <td>手机</td>
+                <td>小于等于480px</td>
+                <td class="muted" colspan="2">流式列，无固定宽度</td>
+              </tr>
+            </tbody>
+          </table>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="com">/* 大屏幕 */</span></li><li class="L1"><span class="lit">@media</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1200px</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="com">/* 平板电脑和小屏电脑之间的分辨率 */</span></li><li class="L4"><span class="lit">@media</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">768px</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">979px</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="com">/* 横向放置的手机和竖向放置的平板之间的分辨率 */</span></li><li class="L7"><span class="lit">@media</span><span class="pln"> </span><span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">767px</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></li><li class="L8"><span class="pln">&nbsp;</span></li><li class="L9"><span class="com">/* 横向放置的手机及分辨率更小的设备 */</span></li><li class="L0"><span class="lit">@media</span><span class="pln"> </span><span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">480px</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></li></ol></pre>
+
+
+          <h2>响应式布局辅助class</h2>
+          <p>为了更快的针对移动设备做开发, 下面列出的辅助class用于针对不同设备显示和隐藏内容。下表是可用的class列表, 以及它们在各个media query布局下的效果。这些class可以在 <code>responsive.less</code> 文件中找到。</p>
+          <table class="table table-bordered table-striped responsive-utilities">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>手机 <small>767px 及以下</small></th>
+                <th>平板 <small>979px 到 768px</small></th>
+                <th>电脑 <small>默认</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>.visible-phone</code></th>
+                <td class="is-visible">显示</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-hidden">隐藏</td>
+              </tr>
+              <tr>
+                <th><code>.visible-tablet</code></th>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">显示</td>
+                <td class="is-hidden">隐藏</td>
+              </tr>
+              <tr>
+                <th><code>.visible-desktop</code></th>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">显示</td>
+              </tr>
+              <tr>
+                <th><code>.hidden-phone</code></th>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">显示</td>
+                <td class="is-visible">显示</td>
+              </tr>
+              <tr>
+                <th><code>.hidden-tablet</code></th>
+                <td class="is-visible">显示</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">显示</td>
+              </tr>
+              <tr>
+                <th><code>.hidden-desktop</code></th>
+                <td class="is-visible">显示</td>
+                <td class="is-visible">显示</td>
+                <td class="is-hidden">隐藏</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>何时使用</h3>
+          <p>在有限的情况下使用, 避免创建同一个站点的不同版本。当这些class能对每种设备的展示做有益的补充的时候才使用。响应式工具不能用于table元素，而且本就不支持。</p>
+
+          <h3>响应式工具测试案例</h3>
+          <p>调整浏览器的宽度或者在不同的设备上加载该页面用以测试上述的class。</p>
+          <h4>在...上显示</h4>
+          <p>绿色选中标记用以指示这些class在你当前的可视窗口是可见的。</p>
+          <ul class="responsive-utilities-test">
+            <li>手机<span class="visible-phone">✔ 手机</span></li>
+            <li>平板<span class="visible-tablet">✔ 平板</span></li>
+            <li>电脑<span class="visible-desktop">✔ 电脑</span></li>
+          </ul>
+          <h4>在...上隐藏</h4>
+          <p>这里的绿色选中标记用以指示这些class在你当前的可视窗口是隐藏的。</p>
+          <ul class="responsive-utilities-test hidden-on">
+            <li>手机<span class="hidden-phone">✔ 手机</span></li>
+            <li>平板<span class="hidden-tablet">✔ 平板</span></li>
+            <li>电脑<span class="hidden-desktop">✔ 电脑</span></li>
+          </ul>
+
+        </section>
+      </div>
+    </div>
+
+  </div>
+  <a href="#myModal" role="button" class="btn" data-toggle="modal">test</a>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <input type='text' id='name'>
+    <input type='text' id='email'>
+    <input type='password' id = 'passwd'>
+    <button type='submit'>submit</button>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p><a href="http://glyphicons.com/">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li><a href="http://blog.getbootstrap.com/">Blog</a></li>
+          <li class="muted">·</li>
+          <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
+          <li class="muted">·</li>
+          <li><a href="https://github.com/twbs/bootstrap/releases">Changelog</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <script src="/static/js/holder.min.js"></script>
+    <script src="/static/js/prettify.js"></script>
+
+    <script src="/static/js/application.js"></script>
+</body>
+</html>
