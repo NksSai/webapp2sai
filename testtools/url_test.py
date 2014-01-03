@@ -19,5 +19,6 @@ def data_post(url, post_dic):
 
 def data_get(url, get_dic = ''):
     req = urllib2.Request(url +"?" +urllib.urlencode(get_dic))
+    return urllib2.urlopen(req).read()
 
 init()

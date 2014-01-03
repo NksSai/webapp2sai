@@ -8,6 +8,6 @@ from controllers import *
 
 urlpatterns = [
         (r'^/$', MainPage),
-        (r'^/admin/$', AdminConsole),
-        (r'^/register/$', Register),
+        (r'^/admin/{0,1}$', AdminConsole),
+        (r'^/register/{0,1}$', Register),
         ]

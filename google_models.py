@@ -12,7 +12,7 @@ class User_DB(db.Model):
     nick_name = db.StringProperty(required = True)
     status = db.BooleanProperty(required = True, default = False)
 
-class EmailCheck(db.Model):
+class EmailCheck_DB(db.Model):
     hash_id = db.StringProperty(required = True)
     ref = db.ReferenceProperty(User_DB)
 
@@ -31,5 +31,11 @@ class Model():
             raise UnboundLocalError("db is None")
         real_db.put()
 
-    def store():
+    def store(self):
         raise NotImplementedError("store not impemented")
+
+    def delete(self):
+        if self.real_db:
+            self.real_db.delete()
+        else:
+            raise UnboundLocalError("db is not impemented")
