@@ -6,11 +6,15 @@
 import logging
 from google.appengine.ext import db
 
-class User_DB(db.model):
+class User_DB(db.Model):
     email = db.EmailProperty(required = True)
     passwd = db.StringProperty(required = True)
     nick_name = db.StringProperty(required = True)
     status = db.BooleanProperty(required = True, default = False)
+
+class EmailCheck(db.Model):
+    hash_id = db.StringProperty(required = True)
+    ref = db.ReferenceProperty(User_DB)
 
 
 class Model():
